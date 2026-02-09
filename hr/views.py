@@ -17,12 +17,35 @@ def landpage(request):
     return HttpResponse('Welcome to Home Page ')
 
 def show_index(request):
-    template=loader.get_template('index.html')
-    return HttpResponse(template.render())
+    return render(request,'index.html')
+
+# def depts(request):
+#      return render(request,'depts.html')
+
 
 def depts(request):
-    page=loader.get_template('depts.html')
-    return HttpResponse(page.render())
+
+    departments=[
+        "الموارد البشرية",
+        "المحاسبة",
+        "تقنية المعلومات",
+        "قسم المشتريات"
+    ]
+
+    s="SAAD SALEM"
+    tax="2500"
+    template=loader.get_template('depts.html')
+    
+    context={
+        'depts':departments,
+        's1':s,
+        't':tax
+    }
+
+    return HttpResponse(template.render(context,request))
+
+
+
 
 
 
