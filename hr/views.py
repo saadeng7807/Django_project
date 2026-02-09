@@ -23,14 +23,40 @@ def show_index(request):
 #      return render(request,'depts.html')
 
 
-def depts(request):
+# def depts(request):
 
+#     departments=[
+#         "الموارد البشرية",
+#         "المحاسبة",
+#         "تقنية المعلومات",
+#         "قسم المشتريات"
+#     ]
+
+#     s="SAAD SALEM"
+#     tax="2500"
+#     template=loader.get_template('depts.html')
+    
+#     context={
+#         'depts':departments,
+#         's1':s,
+#         't':tax
+#     }
+
+#     return HttpResponse(template.render(context,request))
+
+def depts(request):
+    
     departments=[
         "الموارد البشرية",
         "المحاسبة",
         "تقنية المعلومات",
         "قسم المشتريات"
     ]
+    search=request.GET.get('search')
+
+    if search:
+       departments=[d for d in  departments if search in d]
+
 
     s="SAAD SALEM"
     tax="2500"
@@ -43,6 +69,8 @@ def depts(request):
     }
 
     return HttpResponse(template.render(context,request))
+
+
 
 
 
