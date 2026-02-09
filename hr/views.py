@@ -20,5 +20,9 @@ def show_index(request):
     template=loader.get_template('index.html')
     return HttpResponse(template.render())
 
+def depts(request):
+    template=loader.get_template('depts.html')
+    return HttpResponse(template.render())
+
 
 
