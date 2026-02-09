@@ -22,5 +22,6 @@ urlpatterns = [
     path('welcome/',hr.welcome),
     path('total/',hr.total),
     path('tax/<int:number>',hr.tax),
-    path("",hr.landpage)
+    path("",hr.landpage),
+    path('index/',hr.show_index)
 ]

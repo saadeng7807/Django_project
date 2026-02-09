@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.template import loader
 # Create your views here.
 
 def welcome(request):
@@ -14,6 +15,10 @@ def tax(request,number):
 
 def landpage(request):
     return HttpResponse('Welcome to Home Page ')
+
+def show_index(request):
+    template=loader.get_template('index.html')
+    return HttpResponse(template.render())
 
 
 
