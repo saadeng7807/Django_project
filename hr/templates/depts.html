@@ -18,8 +18,11 @@
          <div class="col">
             <button type="submit" class="btn btn-success">بحث</button>
          </div>
+         <div class="col text-start">
+            <a href="{% url 'depts' %}" class="btn btn-primary">ازالة التصفية</a>
+         </div>
        </form>
-       
+
         <div class="row mt-3">
             {% for d in depts %}
             <div class="col">

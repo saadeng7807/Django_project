@@ -24,6 +24,6 @@ urlpatterns = [
     path('tax/<int:number>',hr.tax),
     path("",hr.landpage),
     path('index/',hr.show_index),
-    path('depts/',hr.depts)
+    path('depts/',hr.depts,name='depts')
 
 ]
