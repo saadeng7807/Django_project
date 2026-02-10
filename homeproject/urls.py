@@ -17,6 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from hr import views as hr
+from employee import views as emp 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('welcome/',hr.welcome),
@@ -24,6 +26,7 @@ urlpatterns = [
     path('tax/<int:number>',hr.tax),
     path("",hr.landpage),
     path('index/',hr.show_index),
-    path('depts/',hr.depts,name='depts')
+    path('depts/',hr.depts,name='depts'),
+    path('emp/',emp.get_employee)
 
 ]
