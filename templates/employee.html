@@ -6,15 +6,17 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
     <title>Document</title>
-    {% load bootstrap5 %}
-    {% bootstrap_css %}
-    {% bootstrap_javascript %}
+
+
+        {% load bootstrap5 %}
+        {% bootstrap_css %}
+        {% bootstrap_javascript %}
 </head>
 <body dir="rtl">
    <div class="container">
       
 
-    <div class="row">
+    <div class="row mt-5">
         <div class="col">
             <div class="card">
                 <div class="card-body">
@@ -44,7 +46,22 @@
                 </div>
             </div>
         </div>
-        
+        <div class="col">
+            <div class="card p-3">
+                <div class="card-body">
+                    <form method="get" class="row ">
+                <div class="row">
+                    <div class="col">
+                        <input  type="text" name="search" class="form-control">
+                    </div>
+                    <div class="col">
+                        <button class="btn btn-success">بحث  <i class="bi bi-search"></i></button>
+                    </div>
+                </div>
+            </form>
+                </div>
+            </div>
+        </div>
     </div>
 
 
