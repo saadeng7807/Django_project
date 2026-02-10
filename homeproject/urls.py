@@ -27,6 +27,6 @@ urlpatterns = [
     path("",hr.landpage),
     path('index/',hr.show_index),
     path('depts/',hr.depts,name='depts'),
-    path('emp/',emp.get_employee)
+    path('emp/',emp.get_employee,name='emp')
 
 ]
